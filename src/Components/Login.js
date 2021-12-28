@@ -35,11 +35,10 @@ function Login() {
   // signin Schema using yup
 
   const signInSchema = YUP.object().shape({
-    email: YUP.string().email().required("Please Enter Your email"),
+    email: YUP.string().email(),
 
     password: YUP.string()
-      .min(6, "password should be more than 5 characters")
-      .required("Please enter your password"),
+      .min(6, "password should be more than 5 characters"),   
   });
 
   return (
