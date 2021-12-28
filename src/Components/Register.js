@@ -32,11 +32,11 @@ function Register() {
   };
 
   const signInSchema = YUP.object().shape({
-    name: YUP.string().required("Please enter name"),
-    email: YUP.string().email().required("Please Enter Your Email"),
+    name: YUP.string(),
+    email: YUP.string().email(),
     password: YUP.string()
       .min(6, "password should be atleast 6 characters")
-      .required("Enter your password"),
+      
   });
 
   return (
